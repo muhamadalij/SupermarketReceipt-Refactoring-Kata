@@ -1,6 +1,6 @@
 #include "ReceiptPrinter.h"
 
-ReceiptPrinter::ReceiptPrinter() : ReceiptPrinter(40)
+ReceiptPrinter::ReceiptPrinter() : ReceiptPrinter(DEFAULT_COLUMN_SIZE)
 {
 }
 

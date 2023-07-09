@@ -1,6 +1,8 @@
 #ifndef CPP_RECEIPTPRINTER_H
 #define CPP_RECEIPTPRINTER_H
 
+#define DEFAULT_COLUMN_SIZE 40
+
 #include "Receipt.h"
 #include <iomanip>
 #include <sstream>
