@@ -55,11 +55,7 @@ std::string ReceiptPrinter::presentTotal(const Receipt &receipt) const
 std::string ReceiptPrinter::formatLineWithWhitespace(const std::string &name, const std::string &value) const
 {
     int whitespaceSize = columns - name.length() - value.length();
-    std::string whitespace;
-    for (int i = 0; i < whitespaceSize; i++)
-    {
-        whitespace.append(" ");
-    }
+    std::string whitespace(whitespaceSize,' ');
     return name + whitespace + value + "\n";
 }
 
