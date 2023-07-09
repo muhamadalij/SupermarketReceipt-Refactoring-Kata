@@ -48,7 +48,7 @@ std::string ReceiptPrinter::presentDiscount(const Discount &discount) const
 std::string ReceiptPrinter::presentTotal(const Receipt &receipt) const
 {
     std::string total = "Total: ";
-    std::string pricePresentation = presentPrice(receipt.getTotalPrice());
+    std::string pricePresentation = getFormattedNumberAsString(receipt.getTotalPrice(),2);
     return formatLineWithWhitespace(total, pricePresentation);
 }
 
@@ -61,11 +61,6 @@ std::string ReceiptPrinter::formatLineWithWhitespace(const std::string &name, co
         whitespace.append(" ");
     }
     return name + whitespace + value + "\n";
-}
-
-std::string ReceiptPrinter::presentPrice(double price) const
-{
-    return getFormattedNumberAsString(price, 2);
 }
 
 std::string ReceiptPrinter::presentQuantity(const ReceiptItem &item)
